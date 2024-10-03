@@ -9,7 +9,7 @@ const Hero = () => {
             className="hero-video"
             src="https://player.vimeo.com/video/767309533?api=1&background=1&autoplay=1&loop=1"
             frameBorder="0"
-            allow="autoplay; fullscreen"
+            allow="autoplay fullscreen"
             allowFullScreen
             title="Vimeo Video"
         ></iframe>

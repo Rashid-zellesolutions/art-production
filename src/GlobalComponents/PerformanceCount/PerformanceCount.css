@@ -33,7 +33,7 @@
     font-size: 65px;
     line-height: 88px;
     font-weight: 700;
-    color: var(--hover-color);
+    color: var(--secondry-text-color);
 }
 
 .performance-count-containt p{

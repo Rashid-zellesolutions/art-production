@@ -16,7 +16,7 @@
 }
 
 .our-services-main-section h3 span{
-    color: var(--hover-color);
+    color: var(--secondry-text-color);
 }
 
 .services-show-case-main-container{
@@ -24,7 +24,10 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto;
     gap: 20px;
+    position: relative;
 }
+
+
 
 .grid-col{
     border-radius: 50px;
@@ -32,6 +35,35 @@
     cursor: pointer;
     position: relative;
 }
+
+.flesh-container{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    width: 120px;
+    height: 800px;
+    z-index: 99999;
+    transform: rotate(10deg);
+    transform-origin: 50% 50% 0px;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4) 30%, rgba(0, 0, 0, 0.4) 70%);
+    top: -110px;
+    left:   -190px;
+    right: auto;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    animation: shine 0.3s infinite;
+}
+
+.flesh-container.slide-flash{
+    left: 100%;
+    backdrop-filter: blur(10px); 
+    z-index: 99999999;
+    opacity: 0.12; 
+    will-change: auto; 
+    transform: none; 
+    transform-origin: 50% 50% 0px;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4) 40%, rgba(0, 0, 0, 1) 60%);
+}
+
 
 .grid-col img{
     width: 100%;
@@ -62,11 +94,11 @@
 
 .col-overlay{
     width: 100%;
-    height: 0;
+    height: 100%;
     position: absolute;
     z-index: 50;
     background-color: rgba(0, 0, 0, 0.7);
-    /* top: 0; */
+    top: 0;
     left: 0;
     bottom: 0;
     align-items: start;
@@ -74,15 +106,10 @@
     display: flex;
     overflow: hidden;
     text-align: justify;
-    /* padding: 24px; */
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
-.col-overlay.show-overlay{
-    top: 0;
-    height: 100%;
-    padding: 24px;
-}
+
 
 .col-overlay h3{
     color: #fff;
@@ -90,7 +117,103 @@
     line-height: 38px;
     font-weight: 700;
     text-align: center;
+    margin-top: 24px;
+    transform: translate(0%, 0%);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
 }
+
+.col-overlay.show-overlay h3{
+    opacity: 0;
+    transform: translate(20%, 100%);
+}
+
+.col-inner-overlay{
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+.col-inner-overlay.show-inner-overlay{
+    visibility: visible;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.9);
+    background-image: url('../../Assets/services-images/services-overlay-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inner-overlay-containt{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+
+.inner-overlay-containt h3{
+    display: flex;
+    align-items: center;
+    color: #fff; 
+    font-size: 38px;
+    line-height: 40px;
+    font-weight: 700; 
+    background: linear-gradient(90deg, #FFF, var(--secondry-text-color) ,var(--secondry-text-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translate(0%, -100%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.inner-overlay-containt h3 span{
+    color: var(--secondry-text-color);
+}
+
+.inner-overlay-containt.inner-overlay-containt-effect h3{
+    transform: translate(10%, 50%);
+    /* transform: translate(0%, 0%); */
+    opacity: 1;
+}
+
+.inner-overlay-containt.single-column-overlay h3{
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+
+
+
+.inner-overlay-containt p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateX(-10%);
+    text-align: start;
+    transition: all 0.5s ease-in-out;
+}
+
+.inner-overlay-containt.inner-overlay-containt-effect p{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.inner-overlay-containt.single-column-overlay p{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
 
 .see-all-projects-section{
     display: flex;

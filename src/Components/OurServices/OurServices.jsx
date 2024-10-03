@@ -10,6 +10,16 @@ import markeetingImage from '../../Assets/services-images/tech-vlogger.png'
 import Button from '../../ControlledComponents/PrimeryButton/PrimeryButton';
 
 const OurServices = () => {
+    const servicesData = [
+        {name: 'Video Production', checkName: 'Video Production', img: videoProductionImage, para: 'Through our long experience in this field, we were involved in many sections of video production.', gridClass: 'video-production'},
+        {name: 'Documentries', img: documentriesImage, para: 'Through our long experience in this field.', gridClass: 'documentaries'},
+        {name: 'Creative Interview', img: creativeInterviewImage, para: 'Through our long experience in this field, we were involved in many sections of video production.', gridClass: 'creative-interview'},
+        {name: 'Commercial & Advertisiment', img: commercialImage, para: 'Through our long experience in this field.', gridClass: 'commercial'},
+        {name: 'Event Management', img: eventManagmentImage, para: 'Through our long experience in this field, we were involved in many sections of video production.', gridClass: 'event-managment'},
+        {name: 'Short Films', img: shortFilmImage, para: 'Through our long experience in this field, we were involved in many sections of video production.', gridClass: 'short-films'},
+        {name: 'Markeeting', img: markeetingImage, para: 'Through our long experience in this field, we were involved in many sections of video production.', gridClass: 'markeeting'},
+
+    ]
     const [currentIndex, setCurrentIndex] = useState(null)
     const handleMouseOver = (index) => {setCurrentIndex(index)}
     const handleMouseLeave = () => {setCurrentIndex(null)}
@@ -17,76 +27,28 @@ const OurServices = () => {
     <div className='our-services-main-section'>
         <h3>Our <span>Services</span></h3>
         <div className='services-show-case-main-container'>
-            <div 
-                className='grid-col video-production'  
-                onMouseEnter={() => handleMouseOver(1)} 
-                onMouseLeave={handleMouseLeave}
-            >
-                <img src={videoProductionImage} alt='video production' />
-                <div className={`col-overlay ${currentIndex === 1 ? 'show-overlay' : ''}`}>
-                    <h3>Video Production</h3>
+            
+            {servicesData.map((items, index) => (
+                <div 
+                    className={`grid-col ${items.gridClass}`}  
+                    onMouseEnter={() => handleMouseOver(index)} 
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <div className={`flesh-container ${currentIndex === index ? 'slide-flash' : ''}`}></div>
+                    <img src={items.img} alt='video production' />
+                    <div 
+                        className={`col-overlay ${currentIndex === index ? 'show-overlay' : ''}`}
+                    > 
+                        <h3>{items.name}</h3>
+                        <div className={`col-inner-overlay ${currentIndex === index ? 'show-inner-overlay' : ''}`}>
+                            <div className={`inner-overlay-containt ${currentIndex === index  ? 'inner-overlay-containt-effect' : ''}`}>
+                                <h3>{items.name}</h3>
+                                <p>{items.para}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div 
-                className='grid-col documentaries'
-                onMouseEnter={() => handleMouseOver(2)} 
-                onMouseLeave={handleMouseLeave}
-            >
-                <img src={documentriesImage} alt='Documantries' />
-                <div className={`col-overlay ${currentIndex === 2 ? 'show-overlay' : ''}`}>
-                    <h3>Documantries</h3>
-                </div>
-            </div>
-            <div 
-                className='grid-col creative-interview'
-                onMouseEnter={() => handleMouseOver(3)} 
-                onMouseLeave={handleMouseLeave}
-            >
-                <img src={creativeInterviewImage} alt='Creative Interviews' />
-                <div className={`col-overlay ${currentIndex === 3 ? 'show-overlay' : ''}`}>
-                    <h3>Creative Interviews</h3>
-                </div>
-            </div>
-            <div 
-                className='grid-col commercial'
-                onMouseEnter={() => handleMouseOver(4)} 
-                onMouseLeave={handleMouseLeave}
-            >
-                <img src={commercialImage} alt='Commercial & Advertisiment' />
-                <div className={`col-overlay ${currentIndex === 4 ? 'show-overlay' : ''}`}>
-                    <h3>Commercial & Advertisiment</h3>
-                </div>
-            </div>
-            <div 
-                className='grid-col event-managment'
-                onMouseEnter={() => handleMouseOver(5)} 
-                onMouseLeave={handleMouseLeave}
-            >
-                <img src={eventManagmentImage} alt='Event Managment' />
-                <div className={`col-overlay ${currentIndex === 5 ? 'show-overlay' : ''}`}>
-                    <h3>Event Managment</h3>
-                </div>
-            </div>
-            <div 
-                className='grid-col short-films'
-                onMouseEnter={() => handleMouseOver(6)} 
-                onMouseLeave={handleMouseLeave}
-            >
-                <img src={shortFilmImage} alt='Short Films' />
-                <div className={`col-overlay ${currentIndex === 6 ? 'show-overlay' : ''}`}>
-                    <h3>Short Films</h3>
-                </div>
-            </div>
-            <div 
-                className='grid-col markeeting'
-                onMouseEnter={() => handleMouseOver(7)} 
-                onMouseLeave={handleMouseLeave}
-            >
-                <img src={markeetingImage} alt='Markeeting' />
-                <div className={`col-overlay ${currentIndex === 7 ? 'show-overlay' : ''}`}>
-                    <h3>Markeeting</h3>
-                </div>
-            </div>
+            ))}
         </div>
         <div className='see-all-projects-section'>
             <Button text={'See All Projects'} width={'180px'} height={'55px'} />

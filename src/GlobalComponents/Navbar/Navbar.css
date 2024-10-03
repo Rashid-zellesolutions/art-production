@@ -51,7 +51,7 @@
 }
 
 .navbar-link-anchor.navbar-link-active-anchor{
-    color: var(--hover-color);
+    color: var(--secondry-text-color);
     border-bottom: 3px solid var(--border-color);
 }
 
