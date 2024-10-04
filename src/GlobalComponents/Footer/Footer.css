@@ -1,0 +1,214 @@
+.footer-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* align-items: start; */
+    justify-content: space-between;
+    padding: 20px 80px;
+    color: #fff;
+    gap: 20px;
+}
+
+
+.footer-first-section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.footer-signup{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.footer-logo-and-company-name{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+}
+
+.footer-logo-and-company-name img{
+    width: auto;
+    height: 120px;
+}
+
+.footer-company-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-company-name p{
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.signup-for-newsletter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.signup-for-newsletter span{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.signup-for-newsletter span h3, p{
+    font-size: 17px;
+    line-height: 20 px;
+    font-weight: 700;
+}
+
+.signup-for-newsletter p{
+    color: var(--secondry-text-color);
+}
+
+/* Signup Section */
+.footer-services-section{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+    justify-content: start;
+}
+
+.footer-services-section h3{
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.footer-services-section h3::after{
+    content: "";
+    position: absolute;
+    right: -4px;
+    bottom: -2px;
+    width: 2px;
+    height: 2px;
+    transform: rotate(45deg);
+    border: 1px solid var(--border-color);
+}
+
+.footer-nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav-links a{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Get in Touch */
+.footer-get-in-touch{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+    justify-content: start;
+}
+
+.footer-get-in-touch h3{
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.footer-get-in-touch h3::after{
+    content: "";
+    position: absolute;
+    right: -4px;
+    bottom: -2px;
+    width: 2px;
+    height: 2px;
+    transform: rotate(45deg);
+    border: 1px solid var(--border-color);
+}
+
+.footer-contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-contact-details a{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.footer-follow{
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--secondry-text-color);
+}
+
+.footer-icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-icons a{
+    background: #FFFFFFE0;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #01141D;
+    text-decoration: none;
+}
+
+.footer-copy-rights-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0px;
+    border-top: 1px solid var(--border-color);
+}
+
+
+
+.footer-copy-left-section{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-copy-left-section p{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.footer-copy-right-section{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.footer-copy-right-section a, p{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}

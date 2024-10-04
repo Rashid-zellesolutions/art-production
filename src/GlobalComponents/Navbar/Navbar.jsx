@@ -3,13 +3,14 @@ import './Navbar.css';
 import logo from '../../Assets/logos/logo.png'
 import Button from '../../ControlledComponents/PrimeryButton/PrimeryButton';
 
+
 const Navbar = () => {
     const [isActive, setIsActive] = useState(0)
     const handleNavActive = (index) => {setIsActive(index)}
     const navLinks = [
-        {name: 'Home', link: '#'},
+        {name: 'Home', link: '/'},
         {name: 'About', link: '#'},
-        {name: 'Portfolio', link: '#'},
+        {name: 'Portfolio', link: '/our-projects'},
         {name: 'Services', link: '#'},
     ]
   return (

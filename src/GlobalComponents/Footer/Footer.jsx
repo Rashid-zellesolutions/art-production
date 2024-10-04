@@ -1,0 +1,105 @@
+import React from 'react'
+import './Footer.css'
+import footerLogo from '../../Assets/logos/footer-logo.png';
+import PrimeryButton from '../../ControlledComponents/PrimeryButton/PrimeryButton';
+import InputField from '../../ControlledComponents/InputField/InputField';
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaVimeoV } from "react-icons/fa";
+import { FaRegCopyright } from "react-icons/fa6";
+
+const Footer = () => {
+    const footerNav = [
+        {name: 'Services', links: [
+            {title: 'Video Production', link: '#'},
+            {title: 'Graphic Design', link: '#'},
+            {title: 'Advertiseing', link: '#'},
+            {title: 'Markeeting', link: '#'},
+            {title: 'Events Management', link: '#'},
+            {title: 'Markeeting', link: '#'},
+            {title: 'Event Management', link: '#'},
+        ]},
+        {name: 'Help Center', links: [
+            {title: 'Home', link: '#'},
+            {title: 'About Us', link: '#'},
+            {title: 'Portfolio', link: '#'},
+            {title: 'Services', link: '#'},
+        ]},
+    ]
+    const footerSocialIcons = [
+        {link: '#', icon: <FaFacebookF size={20} />}, 
+        {link: '#', icon: <FaInstagram size={20} />}, 
+        {link: '#', icon: <FaTwitter size={20} />}, 
+        {link: '#', icon: <FaLinkedinIn size={20} />}, 
+        {link: '#', icon: <FaYoutube size={20} />}, 
+        {link: '#', icon: <FaVimeoV size={20} />} 
+    ]
+  return (
+    <div className='footer-main-container'>
+        <div className='footer-first-section'>
+            <div className='footer-signup'>
+                <div className='footer-logo-and-company-name'>
+                    <img src={footerLogo} alt='footer-logo' />
+                    <div className='footer-company-name'>
+                        <p>art</p>
+                        <p>production</p>
+                        <p>video production</p>
+                    </div>  
+                </div>
+                <div className='signup-for-newsletter'>
+                    <span>
+                        <h3>Sign Up for</h3>
+                        <p>Newsletter</p>
+                    </span>
+                    <InputField type={'text'} textAlign={'center'} placeholder={'Enter Your Email'} width={'auto'} height={'30px'} />
+                    <PrimeryButton text={'Submit'} width={'auto'} height={'30px'} />
+                </div>
+            </div>
+            {footerNav.map((items, index) => (
+                <div key={index} className='footer-services-section'>
+                    <h3>{items.name}</h3>
+                    
+                    <div className='footer-nav-links'>
+                        {items.links.map((link, index) => (
+                            <a href={link.link}>{link.title}</a>
+                        ))}
+
+                    </div>
+                </div>
+            ))}
+            
+            <div className='footer-get-in-touch'>
+                    <h3>Get in touch</h3>
+                    <div className='footer-contact-details'>
+                        <a>+1 (724) 246-4538</a>
+                        <a>info@artproduction.net</a>
+                        <a>Location, Address, United <br />
+                            Arab Emirates
+                        </a>
+                        <p className='footer-follow'>Follow Us</p>
+                        <div className='footer-icons'>
+                            {footerSocialIcons.map((items, index) => (
+                                <a key={index} href={items.link}>{items.icon}</a>
+                            ))}
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div className='footer-copy-rights-section'>
+            <div className='footer-copy-left-section'>
+                <FaRegCopyright size={10} />
+                <p>2024 Art Production - All Rights Reserved</p>
+            </div>
+            <div className='footer-copy-right-section'>
+                <a href='#'>Terms & Conditions</a>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Footer

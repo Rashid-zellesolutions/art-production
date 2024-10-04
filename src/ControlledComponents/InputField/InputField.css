@@ -1,0 +1,26 @@
+input {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: #fff;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    border-radius: 4px;
+}
+
+input::placeholder{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #fff;
+    outline: none;
+    
+}
+
+input:focus{
+    outline: none;
+}

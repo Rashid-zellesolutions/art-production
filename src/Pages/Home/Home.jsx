@@ -6,6 +6,7 @@ import OurServices from '../../Components/OurServices/OurServices';
 import Hero from '../../GlobalComponents/Hero/Hero';
 import CustomCarousel from '../../GlobalComponents/Slider/CustomCarousel';
 import Stories from '../../Components/Stories/Stories';
+import Footer from '../../GlobalComponents/Footer/Footer';
 
 const Home = () => {
 
@@ -13,10 +14,12 @@ const Home = () => {
   return (
     <div>
         {/* <Navbar /> */}
-        <Hero />
+        {/* <Hero /> */}
         <PerformanceCount />
         <OurServices />
-        {/* <Stories /> */}
+        {/* <Stories />
+        <CustomCarousel /> */}
+        {/* <Footer /> */}
     </div>
   )
 }

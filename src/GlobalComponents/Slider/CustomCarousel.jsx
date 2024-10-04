@@ -1,103 +1,59 @@
-// Carousel.js
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+// src/CardSlider.js
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css'; // Ensure you import the Swiper styles
+// import 'swiper/swiper-bundle.css'; // Ensure you import the Swiper styles
+// import 'swiper/modules/pagination/pagination.css'; // Import pagination styles if needed
+import './CustomCarousel.css';
+import { Pagination, EffectCoverflow } from 'swiper/modules';
+import alJazeeraLogo from '../../Assets/logos/aljazeera.png'
+import 'swiper/css';
 
-const CarouselContainer = styled.div`
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 100vw; /* Adjust as needed */
-`;
+// Create the CardSlider component
+const CardSlider = () => {
+  const storiesData = [
+    {logo: alJazeeraLogo, post: `The teams that worked on our projects on location and in 
+            premise have been very professional and flexible and we always get exactly what 
+            we are looking for, if not more`,
+        name: 'Abdo Madkhana', position: 'MANAGER AL JAZEERA'
+    },
+    {logo: alJazeeraLogo, post: `The teams that worked on our projects on location and in 
+            premise have been very professional and flexible and we always get exactly what 
+            we are looking for, if not more`,
+        name: 'Abdo Madkhana', position: 'MANAGER AL JAZEERA'
+    },
+    {logo: alJazeeraLogo, post: `The teams that worked on our projects on location and in 
+            premise have been very professional and flexible and we always get exactly what 
+            we are looking for, if not more`,
+        name: 'Abdo Madkhana', position: 'MANAGER AL JAZEERA'
+    },
+    // {logo: alJazeeraLogo, post: `The teams that worked on our projects on location and in 
+    //         premise have been very professional and flexible and we always get exactly what 
+    //         we are looking for, if not more`,
+    //     name: 'Abdo Madkhana', position: 'MANAGER AL JAZEERA'
+    // },
+    // {logo: alJazeeraLogo, post: `The teams that worked on our projects on location and in 
+    //     premise have been very professional and flexible and we always get exactly what 
+    //     we are looking for, if not more`,
+    //     name: 'Abdo Madkhana', position: 'MANAGER AL JAZEERA'
+    // },
 
-const SlideWrapper = styled.div`
-  display: flex;
-  transition: transform 0.5s ease;
-  transform: translateX(${props => props.translate}%) ;
-`;
-
-const Slide = styled.div`
-  min-width: ${props => props.cardSize || '300px'};
-  flex: 0 0 auto;
-  margin: 0 10px; /* Adjust for spacing between cards */
-`;
-
-const Arrow = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 1000;
-  ${props => (props.left ? 'left: 10px;' : 'right: 10px;')}
-`;
-
-const DotsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-`;
-
-const Dot = styled.div`
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: ${props => (props.active ? 'black' : 'lightgray')};
-  margin: 0 5px;
-  cursor: pointer;
-`;
-
-const CustomCarousel = ({
-  slides,
-  autoplay = false,
-  slideTime = 3000,
-  showArrows = true,
-  showDots = true,
-  cardSize = '300px',
-  continuous = true,
-}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  const totalSlides = slides.length;
-
-  const nextSlide = () => {
-    setCurrentIndex(prevIndex => (prevIndex + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(prevIndex => (prevIndex - 1 + totalSlides) % totalSlides);
-  };
-
-  useEffect(() => {
-    let timer;
-    if (autoplay) {
-      timer = setInterval(nextSlide, slideTime);
-    }
-    return () => clearInterval(timer);
-  }, [autoplay, slideTime]);
-
+]
   return (
-    <CarouselContainer>
-      <SlideWrapper translate={-currentIndex * (100 / totalSlides)}>
-        {slides.map((slide, index) => (
-          <Slide key={index} cardSize={cardSize}>
-            {slide}
-          </Slide>
-        ))}
-      </SlideWrapper>
-      {showArrows && (
-        <>
-          <Arrow left onClick={prevSlide}>❮</Arrow>
-          <Arrow onClick={nextSlide}>❯</Arrow>
-        </>
-      )}
-      {showDots && (
-        <DotsContainer>
-          {slides.map((_, index) => (
-            <Dot key={index} active={index === currentIndex} onClick={() => setCurrentIndex(index)} />
-          ))}
-        </DotsContainer>
-      )}
-    </CarouselContainer>
+    <div className='main'>
+      <Swiper
+      spaceBetween={50}
+      slidesPerView={3}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+    </Swiper>
+    </div>
   );
 };
 
-export default CustomCarousel;
+export default CardSlider;

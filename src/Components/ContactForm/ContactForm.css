@@ -1,0 +1,85 @@
+.contact-us-main-div{
+    display: flex;
+    width: 100%;
+    padding: 60px 80px;
+    background: #0C273380;
+}
+
+.contact-left-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    padding: 20px;
+}
+
+.contact-heading{
+    font-size: 58px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #fff;
+}
+.contact-heading span{
+    color: var(--secondry-text-color);
+}
+
+.contact-desc{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.contact-follow{
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.contact-follow span{
+    color: var(--secondry-text-color);
+}
+
+.contact-social-icons{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-social-icons a{
+    background-color: #FFFFFF;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #0C2733;
+    text-decoration: none;
+}
+
+.contact-right-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    gap: 10px;
+}
+
+.text-message{
+    width: 425px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    outline: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.text-message::placeholder{
+    color: #fff;
+}
