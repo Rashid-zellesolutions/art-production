@@ -2,7 +2,7 @@ import React from 'react'
 import './Hero.css';
 import Navbar from '../Navbar/Navbar';
 
-const Hero = () => {
+const Hero = ({welcomText, mainHeading, heroDesc}) => {
   return (
     <div className='hero-main-section'>
         <iframe
@@ -16,8 +16,9 @@ const Hero = () => {
         <div className="hero-overlay">
             <Navbar />
             <div className='hero-overlay-text'>
-                <p>Welcome To Art Production</p>
-                <h1>Innovating Art, Inspiring Creativity</h1>
+                <p>{welcomText}</p>
+                <h1>{mainHeading}</h1>
+                <p className='hero-desc'>{heroDesc}</p>
             </div>
         </div>
     </div>

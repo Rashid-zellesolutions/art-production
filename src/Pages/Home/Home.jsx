@@ -13,13 +13,8 @@ const Home = () => {
   
   return (
     <div>
-        {/* <Navbar /> */}
-        {/* <Hero /> */}
         <PerformanceCount />
         <OurServices />
-        {/* <Stories />
-        <CustomCarousel /> */}
-        {/* <Footer /> */}
     </div>
   )
 }

@@ -8,6 +8,7 @@ import eventManagmentImage from '../../Assets/services-images/man-making-music-b
 import shortFilmImage from '../../Assets/services-images/man-filming-with-professional-camera.png'
 import markeetingImage from '../../Assets/services-images/tech-vlogger.png'
 import Button from '../../ControlledComponents/PrimeryButton/PrimeryButton';
+import PrimeryButton from '../../ControlledComponents/PrimeryButton/PrimeryButton';
 
 const OurServices = () => {
     const servicesData = [
@@ -51,7 +52,15 @@ const OurServices = () => {
             ))}
         </div>
         <div className='see-all-projects-section'>
-            <Button text={'See All Projects'} width={'180px'} height={'55px'} />
+            <PrimeryButton 
+                text={'See All Projects'} 
+                width={'180px'} 
+                height={'55px'}
+                fontSize={'18px'}
+                lineHeight={'22px'}
+                fontWeight={'400'}
+                color={'#fff'}
+            />
         </div>
     </div>
   )

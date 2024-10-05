@@ -39,28 +39,52 @@ const ContactForm = () => {
                 type={'text'} 
                 placeholder={'Your Name'}
                 width={'425px'}
-                height={'30px'}
+                height={'50px'}
                 textAlign={'start'}
-                padding={'2px 10px'}
+                padding={'12px 23px 3px 23px'}
+                fontSize={'18px'}
+                lineHeight={'27px'}
+                fontWeight={'600'}
+                color={'#fff'}
+                borderRadius={'10px'}
             />
             <InputField 
                 type={'text'} 
                 placeholder={'Your Email'}
                 width={'425px'}
-                height={'30px'}
+                height={'50px'}
                 textAlign={'start'}
-                padding={'2px 10px'}
+                padding={'12px 23px 3px 23px'}
+                fontSize={'18px'}
+                lineHeight={'27px'}
+                fontWeight={'600'}
+                color={'#fff'}
+                borderRadius={'10px'}
             />
             <InputField 
                 type={'text'} 
                 placeholder={'Your Phone'}
                 width={'425px'}
-                height={'30px'}
+                height={'50px'}
                 textAlign={'start'}
-                padding={'2px 10px'}
+                padding={'12px 23px 3px 23px'}
+                fontSize={'18px'}
+                lineHeight={'27px'}
+                fontWeight={'600'}
+                color={'#fff'}
+                borderRadius={'10px'}
             />
             <textarea rows={3} placeholder='Message' className='text-message' />
-            <PrimeryButton text={'SUBMIT'} width={'auto'} height={'30px'} padding={'2px 10px'} />
+            <PrimeryButton 
+                text={'SUBMIT'} 
+                width={'182px'} 
+                height={'50px'} 
+                padding={'2px 10px'}
+                fontSize={'17px'}
+                lineHeight={'25px'}
+                fontWeight={'600'}
+                color={'#fff'}
+            />
         </div>
     </div>
   )

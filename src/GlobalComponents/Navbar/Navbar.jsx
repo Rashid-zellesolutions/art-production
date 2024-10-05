@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css';
 import logo from '../../Assets/logos/logo.png'
-import Button from '../../ControlledComponents/PrimeryButton/PrimeryButton';
+import PrimeryButton from '../../ControlledComponents/PrimeryButton/PrimeryButton';
 
 
 const Navbar = () => {
@@ -9,9 +9,9 @@ const Navbar = () => {
     const handleNavActive = (index) => {setIsActive(index)}
     const navLinks = [
         {name: 'Home', link: '/'},
-        {name: 'About', link: '#'},
+        {name: 'About', link: '/about-us'},
         {name: 'Portfolio', link: '/our-projects'},
-        {name: 'Services', link: '#'},
+        {name: 'Services', link: '/services'},
     ]
   return (
     <div className='navbar-main-container'>
@@ -31,7 +31,15 @@ const Navbar = () => {
                 ))}
             </div>
             <div className='navbar-contact-btn-section'>
-                <Button text={'Contact Us'} width={'173px'} height={'55px'} />
+                <PrimeryButton 
+                    text={'Contact Us'} 
+                    width={'173px'} 
+                    height={'55px'}
+                    fontSize={'18px'}
+                    lineHeight={'22px'}
+                    fontWeight={'400'}
+                    color={'#fff'} 
+                />
             </div>
         </div>
     </div>

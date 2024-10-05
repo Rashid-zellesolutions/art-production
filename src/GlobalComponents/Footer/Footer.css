@@ -4,7 +4,7 @@
     width: 100%;
     /* align-items: start; */
     justify-content: space-between;
-    padding: 20px 80px;
+    padding: 20px 0px;
     color: #fff;
     gap: 20px;
 }
@@ -14,7 +14,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-
+    padding: 0px 80px;
 }
 
 .footer-signup{
@@ -32,7 +32,7 @@
 
 .footer-logo-and-company-name img{
     width: auto;
-    height: 120px;
+    height: 142px;
 }
 
 .footer-company-name{
@@ -41,8 +41,8 @@
 }
 
 .footer-company-name p{
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 34px;
+    line-height: 42px;
     font-weight: 500;
 }
 
@@ -58,14 +58,17 @@
     gap: 5px;
 }
 
-.signup-for-newsletter span h3, p{
-    font-size: 17px;
-    line-height: 20 px;
+.signup-for-newsletter span h3{
+    font-size: 28px;
+    line-height: 38px;
     font-weight: 700;
 }
 
 .signup-for-newsletter p{
-    color: var(--secondry-text-color);
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 700;
+    color: var(--secondry-text-color) !important;
 }
 
 /* Signup Section */
@@ -81,6 +84,7 @@
     font-size: 17px;
     line-height: 20px;
     font-weight: 700;
+    letter-spacing: 2px;
     padding-bottom: 14px;
     border-bottom: 1px solid var(--border-color);
     position: relative;
@@ -104,10 +108,10 @@
 }
 
 .footer-nav-links a{
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
-    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 200 !important;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -147,9 +151,9 @@
 }
 
 .footer-contact-details a{
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 200;
 }
 
 .footer-follow{
@@ -167,7 +171,7 @@
 
 .footer-icons a{
     background: #FFFFFFE0;
-    padding: 8px;
+    padding: 7px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -180,7 +184,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 0px;
+    padding: 22px 80px;
     border-top: 1px solid var(--border-color);
 }
 
@@ -193,9 +197,9 @@
 }
 
 .footer-copy-left-section p{
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
 }
 
 .footer-copy-right-section{
@@ -205,10 +209,10 @@
 }
 
 .footer-copy-right-section a, p{
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
-    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
     cursor: pointer;
     text-decoration: none;
 }

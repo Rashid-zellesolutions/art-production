@@ -54,8 +54,26 @@ const Footer = () => {
                         <h3>Sign Up for</h3>
                         <p>Newsletter</p>
                     </span>
-                    <InputField type={'text'} textAlign={'center'} placeholder={'Enter Your Email'} width={'auto'} height={'30px'} />
-                    <PrimeryButton text={'Submit'} width={'auto'} height={'30px'} />
+                    <InputField 
+                        type={'text'} 
+                        textAlign={'center'} 
+                        placeholder={'Enter Your Email'} 
+                        width={'auto'} height={'50px'}
+                        borderRadius={'31px'} 
+                        fontSize={'17px'}
+                        lineHeight={'25px'}
+                        fontWeight={'600'}
+                        color={'#fff'}
+                    />
+                    <PrimeryButton 
+                        text={'Submit'} 
+                        width={'auto'} 
+                        height={'50px'}
+                        fontSize={'17px'}
+                        lineHeight={'25px'}
+                        fontWeight={'600'}
+                        color={'#fff'} 
+                    />
                 </div>
             </div>
             {footerNav.map((items, index) => (
